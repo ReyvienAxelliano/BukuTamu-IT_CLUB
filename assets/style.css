@@ -1,0 +1,280 @@
+/* global css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 100px auto;
+  background-color: #fdf5e0;
+  background-image: url(../img/backgorund3.png);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: cover;
+  background-position: center;
+  /* background-size: 100vw 100vh; pilihan lain untuk background agar fullscrean*/
+}
+
+.wrapper {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -200px;
+  margin-top: -70px;
+  width: 650px;
+  height: auto;
+  border: 3px solid transparent;
+  background-color: #8f97798f;
+  border-color: rgba(88, 115, 39, 0.349);
+  border: 2 px solid transparent;
+  /*padding: 30px 20px 0px;
+  */
+  position: relative;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -webkit-border-radius: 30px;
+}
+
+form:not(.form-pengecualian):not(.form-nama-depan-nama-belakang):not(.form-s) {
+  margin-left: 15px;
+  margin-right: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: rgba(77, 97, 17, 0.562);
+  /*margin-top: 0;
+  */
+  /* margin-bottom: 30px; */
+  /* margin-bottom: 70px;  */
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  -webkite-animation: fade-in 2s ease-in-out;
+  text-align: center;
+  /* -webkit-animation */
+  animation: fade-in 2s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  /* align-items: center; */
+  text-decoration: none;
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+label {
+  /* padding: top 100px; */
+  line-height: 2;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #00000044;
+  background-color: solid #8f9779;
+}
+
+input {
+  display: block !important;
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0.477);
+  height: auto;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background: transparent;
+  padding-right: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.form-nama-depan-nama-belakang {
+  display: flex;
+  justify-content: flex-start;
+}
+
+input#nama-belakang {
+  box-sizing: border-box;
+}
+
+.nama-depan-nama-belakang {
+  display: flex;
+  align-items: center; /* Menyelaraskan semua elemen secara vertikal */
+  gap: 10px; /* Jarak antara label dan input */
+  margin-left: 12px;
+}
+
+.nama-depan-nama-belakang label {
+  min-width: 100px; /* Lebar minimum untuk label agar sejajar */
+}
+
+.nama-depan-nama-belakang input {
+  padding: 0; /*  axel pantek males belajar*/
+  /* border-radius: 0; */
+  width: 174px;
+  border-radius: 0px;
+  /*Aturlebarinputjikadiperlukan:;*/
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+input::placeholder {
+  color: rgba(32, 77, 11, 0.774);
+}
+
+select {
+  background-color: transparent;
+  border: transparent;
+}
+
+/* .no-wa {
+}
+
+.email {
+}
+
+.alamat {
+}
+
+
+
+.pekerjaan {
+}
+
+.maksud {
+} */
+
+.hari-tanggal {
+  display: flex;
+  /* grid-template-rows: auto; */
+  flex-direction: row-reverse;
+  /* justify-content: first baseline; */
+}
+
+.bwah {
+  padding-top: 12px;
+}
+
+/* .logins {
+  flex-direction: row;
+  /* margin-bottom: 2px; */
+
+.btn {
+  position: relative;
+  border-right: transparent;
+  border-bottom: transparent;
+  border-left: transparent;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  background: transparent;
+  text-decoration: none;
+  text-shadow: #8f9779;
+  /* background-color: #8a9a5b; */
+  color: white;
+  padding: 0px 213px 0px 213px;
+  /* border: none; */
+  cursor: pointer;
+  /* border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px; */
+  animation-duration: 0.3s;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
