@@ -111,24 +111,20 @@ body {
   -webkit-border-radius: 30px;
 }
 
-form:not(.form-pengecualian):not(.form-nama-depan-nama-belakang):not(.form-s) {
-  margin-left: 15px;
-  margin-right: 50px;
-}
-
 h1 {
   font-size: 2.5rem;
   color: rgba(77, 97, 17, 0.562);
   /*margin-top: 0;
+  */ /*margin-bottom: 30px;
+  */ /*margin-bottom: 70px;
   */
-  /* margin-bottom: 30px; */
-  /* margin-bottom: 70px;  */
   position: relative;
   font-family: "Courier New", Courier, monospace;
   -webkite-animation: fade-in 2s ease-in-out;
   text-align: center;
-  /* -webkit-animation */
+  /*-webkit-animation*/
   animation: fade-in 2s ease-in-out;
+  -webkit-animation: fade-in 2s ease-in-out;
 }
 
 h2 {
@@ -148,7 +144,8 @@ label {
 }
 
 input {
-  display: block !important;
+  outline: none; /* menghilangkan garis luar ketika ingin mengisi bagian input */
+  display: block;
   width: 100%;
   border-color: rgba(0, 0, 0, 0.477);
   height: auto;
@@ -162,6 +159,21 @@ input {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+}
+
+input:focus {
+  /*aktifketikacursormenekanelemenyangdifocuskan*/
+  border-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: 3s;
+  animation: 3s;
+  background-color: rgba(3, 46, 9, 0.089);
+  -webkit-animation: 3s;
+}
+
+input::hover {
+  /* aktif ketika curor melayang di atas elemen yang dihover*/
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: aqua;
 }
 
 .form-nama-depan-nama-belakang {
@@ -185,12 +197,12 @@ input#nama-belakang {
 }
 
 .nama-depan-nama-belakang input {
-  padding: 0; /*  axel pantek males belajar*/
-  /* border-radius: 0; */
-  width: 174px;
-  border-radius: 0px;
+  padding: 0;
   /*Aturlebarinputjikadiperlukan:;*/
+  width: 174px;
+  /* border-radius: 0; */
   -webkit-border-radius: 0;
+  border-radius: 0px;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
@@ -206,24 +218,34 @@ select {
   border: transparent;
 }
 
-/* .no-wa {
+.no-wa {
+  margin-left: 15px;
+  margin-right: 50px;
 }
 
 .email {
+  margin-left: 15px;
+  margin-right: 50px;
 }
 
 .alamat {
+  margin-left: 15px;
+  margin-right: 50px;
 }
 
-
-
 .pekerjaan {
+  margin-left: 15px;
+  margin-right: 50px;
 }
 
 .maksud {
-} */
+  margin-left: 15px;
+  margin-right: 50px;
+}
 
 .hari-tanggal {
+  margin-left: 15px;
+  margin-right: 50px;
   display: flex;
   /* grid-template-rows: auto; */
   flex-direction: row-reverse;
@@ -232,6 +254,7 @@ select {
 
 .bwah {
   padding-top: 12px;
+  gap: 2px;
 }
 
 /* .logins {
@@ -254,7 +277,7 @@ select {
   text-shadow: #8f9779;
   /* background-color: #8a9a5b; */
   color: white;
-  padding: 0px 213px 0px 213px;
+  padding: 0px 238px 0px 238px;
   /* border: none; */
   cursor: pointer;
   /* border-radius: 15px;
@@ -263,6 +286,7 @@ select {
   -ms-border-radius: 15px;
   -o-border-radius: 15px; */
   animation-duration: 0.3s;
+  -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   -webkit-transition: background-color 0.3s ease-in-out;
   -moz-transition: background-color 0.3s ease-in-out;

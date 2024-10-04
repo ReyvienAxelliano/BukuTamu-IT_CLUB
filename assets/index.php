@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamu</title>
-</head>
-<body>
-    Tamu
-</body>
-</html>
+<?php
+$host = "localhost";
+$username ="root";
+$password =""; 
+$database = "bukutamu";
+
+$koneksi = new mysqli($host,$username,$password,$database) or die(mysqli_error($koneksi));
+if (!$koneksi) {
+    echo "invalid";
+} else {
+    echo "valid";
+}
