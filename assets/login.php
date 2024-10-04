@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <?php
+// jalur ke file koneksi
+include 'index.php';
+
 // uji jika tombol simpan di klik
 if(isset($_POST['bsimpan'])){
 
   // ambil data yang diinputkan user
   $nama_depan = htmlspecialchars( $_POST['nama-depan'], ENT_NOQUOTES );
   $nama_belakang = htmlspecialchars( $_POST['nama-belakang'], ENT_NOQUOTES );
-  $alamat= htmlspecialchars( $_POST['alamat'], ENT_NOQUOTES );
-  $email = htmlspecialchars( $_POST['email'], ENT_NOQUOTES );
   $no_wa = htmlspecialchars( $_POST['no-wa'], ENT_NOQUOTES );
+  $email = htmlspecialchars( $_POST['email'], ENT_NOQUOTES );
+  $alamat= htmlspecialchars( $_POST['alamat'], ENT_NOQUOTES );
+  $hari = htmlspecialchars($_POST['hari'], ENT_NOQUOTES);
+  $tanggal = htmlspecialchars($_POST['tanggal'], ENT_NOQUOTES);
+  $pekerjaan = htmlspecialchars($_POST['pekerjaan'], ENT_NOQUOTES);
+  $kedatangan = htmlspecialchars($_POST['kedatangan'], ENT_NOQUOTES);
+  $maksud = htmlspecialchars($_POST['maksud'], ENT_NOQUOTES);
 
    // Persiapan query simpan
-   $simpan = mysqli_query($koneksi, "INSERT INTO bukutamuttttt VALUES (NULL, '$nama_depan', '$nama_belakang', '$alamat', '$email', '$no_wa')");
+   $simpan = mysqli_query($koneksi, "INSERT INTO bukutamuttttt (`nama-depan`, `nama-belakang`, `no-wa`, `email`, `alamat`, `hari`, `tanggal`, `pekerjaan`, `kedatangan`, `maksud`) 
+   VALUES ('$nama_depan', '$nama_belakang', '$no_wa', '$email', '$alamat', '$hari', '$tanggal', '$pekerjaan', '$kedatangan', '$maksud')");
 
-  // uji jika simpan data sukses
+  // uji jika data tersimpan
   if ($simpan){
     echo "<script>alert('Data berhasil disimpan'); document.location='?'</script>";
   }else{
-    echo "<script>alert('gagal simpan data');document.location='?'</script>";  
+    echo "<script>alert('Gagal simpan data');document.location='?'</script>";  
 }
 }
 ?>
@@ -42,7 +51,7 @@ if(isset($_POST['bsimpan'])){
     <h2>Selamat datang di Buku Tamu!</h2>
       <p>Silahkan isi formulir dibawah ini:</p>
       <div class="container">
-        <form class="form-s" action="/submit" method="post">
+        <form class="form-s" action="" method="post">
 
           <!-- Untuk nama depan dan nama belakang -->
           <!-- <form class="form-nama-depan-nama-belakang" action=""> -->
